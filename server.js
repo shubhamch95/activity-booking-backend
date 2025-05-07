@@ -16,6 +16,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to our application!');
+  });  
+
 app.use('/api/auth', authRoutes);
 app.use('/api/activities', activityRoutes);
 app.use('/api/bookings', bookingRoutes);
