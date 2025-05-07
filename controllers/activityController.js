@@ -1,7 +1,5 @@
-// controllers/activityController.js
 const Activity = require('../models/Activity');
 
-// Create a new activity (only for authorized users, e.g., admin)
 exports.createActivity = async (req, res) => {
   const { title, description, location, date, time } = req.body;
 
@@ -22,7 +20,6 @@ exports.createActivity = async (req, res) => {
   }
 };
 
-// Get all activities (public endpoint)
 exports.getActivities = async (req, res) => {
     try {
       const activities = await Activity.find();

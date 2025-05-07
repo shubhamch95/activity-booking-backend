@@ -1,8 +1,6 @@
-// controllers/bookingController.js
 const Booking = require('../models/Booking');
 const Activity = require('../models/Activity');
 
-// Book an activity
 exports.bookActivity = async (req, res) => {
   const userId = req.user.userId;
   const { activityId } = req.body;
@@ -26,7 +24,6 @@ exports.bookActivity = async (req, res) => {
   }
 };
 
-// Get all bookings for the logged-in user
 exports.getMyBookings = async (req, res) => {
   const userId = req.user.userId;
 
